@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===== EXPANDABLE SERVICE CARDS =====
     
     const serviceCards = document.querySelectorAll('.service-card--expandable');
+    console.log('Service cards found:', serviceCards.length);
     
     serviceCards.forEach(card => {
         const toggleBtn = card.querySelector('.service-card__toggle');
@@ -121,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (toggleBtn) {
             toggleBtn.addEventListener('click', function(e) {
                 e.stopPropagation();
+                console.log('Toggle clicked for card:', card.dataset.service);
                 
                 // Close other cards
                 serviceCards.forEach(otherCard => {
@@ -163,6 +165,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (toggleBtn) toggleBtn.click();
             });
         }
+    });
+
+    // ===== SERVICE SUB-OPTIONS TABS =====
+    
+    const suboptions = document.querySelectorAll('.service-suboptions');
+    
+    suboptions.forEach(suboption => {
+        const tabs = suboption.querySelectorAll('.service-suboptions__tab');
+        const panels = suboption.querySelectorAll('.service-suboptions__panel');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const targetPanel = this.dataset.tab;
+                
+                // Remove active from all tabs and panels
+                tabs.forEach(t => t.classList.remove('active'));
+                panels.forEach(p => p.classList.remove('active'));
+                
+                // Add active to clicked tab and corresponding panel
+                this.classList.add('active');
+                suboption.querySelector(`[data-panel="${targetPanel}"]`).classList.add('active');
+            });
+        });
     });
 
     // ===== SCROLL ANIMATION FOR ELEMENTS =====

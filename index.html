@@ -120,8 +120,8 @@
                 </div>
                 
                 <div class="services__grid">
-                    <!-- Service 1: Residential Cleaning -->
-                    <article class="service-card service-card--expandable" data-service="residential">
+                    <!-- Service 1: Residential Cleaning with Sub-options -->
+                    <article class="service-card service-card--expandable service-card--has-suboptions" data-service="residential">
                         <div class="service-card__header">
                             <div class="service-card__icon">
                                 <i class="fa-solid fa-house"></i>
@@ -136,17 +136,180 @@
                             </button>
                         </div>
                         <div class="service-card__details">
-                            <h4>What's Included:</h4>
-                            <ul class="service-card__specs">
-                                <li><i class="fa-solid fa-check"></i> Dusting all surfaces and furniture</li>
-                                <li><i class="fa-solid fa-check"></i> Vacuuming carpets and mopping floors</li>
-                                <li><i class="fa-solid fa-check"></i> Kitchen cleaning (counters, appliances, sink)</li>
-                                <li><i class="fa-solid fa-check"></i> Bathroom sanitization</li>
-                                <li><i class="fa-solid fa-check"></i> Bedroom cleaning and bed making</li>
-                                <li><i class="fa-solid fa-check"></i> Trash removal</li>
-                                <li><i class="fa-solid fa-check"></i> All cleaning supplies included</li>
-                            </ul>
-                            <a href="#contact" class="btn btn--primary btn--sm">Get Quote</a>
+                            <p class="service-card__intro">Choose the cleaning level that fits your needs:</p>
+                            
+                            <!-- Sub-options Tabs -->
+                            <div class="service-suboptions">
+                                <div class="service-suboptions__tabs">
+                                    <button class="service-suboptions__tab active" data-tab="basic">
+                                        <i class="fa-solid fa-broom"></i>
+                                        <span>Basic</span>
+                                    </button>
+                                    <button class="service-suboptions__tab" data-tab="deep">
+                                        <i class="fa-solid fa-sparkles"></i>
+                                        <span>Deep</span>
+                                    </button>
+                                </div>
+                                
+                                <!-- Basic Cleaning Panel -->
+                                <div class="service-suboptions__panel active" data-panel="basic">
+                                    <h4><i class="fa-solid fa-broom"></i> Basic Cleaning</h4>
+                                    <p class="service-suboptions__desc">Regular maintenance cleaning for a fresh and tidy home.</p>
+                                    
+                                    <div class="service-specs-category">
+                                        <h5><i class="fa-solid fa-couch"></i> Living Room & Common Areas</h5>
+                                        <ul class="service-card__specs">
+                                            <li><i class="fa-solid fa-check"></i> Dust furniture and visible surfaces</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean tables, shelves, and bookcases</li>
+                                            <li><i class="fa-solid fa-check"></i> Fluff cushions (no washing)</li>
+                                            <li><i class="fa-solid fa-check"></i> Empty trash cans</li>
+                                            <li><i class="fa-solid fa-check"></i> Sweep or vacuum floors</li>
+                                            <li><i class="fa-solid fa-check"></i> Mop floors</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="service-specs-category">
+                                        <h5><i class="fa-solid fa-bed"></i> Bedrooms</h5>
+                                        <ul class="service-card__specs">
+                                            <li><i class="fa-solid fa-check"></i> Dust furniture</li>
+                                            <li><i class="fa-solid fa-check"></i> Make beds (no sheet change, unless agreed)</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean nightstands</li>
+                                            <li><i class="fa-solid fa-check"></i> Empty trash</li>
+                                            <li><i class="fa-solid fa-check"></i> Sweep or vacuum</li>
+                                            <li><i class="fa-solid fa-check"></i> Mop floors</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="service-specs-category">
+                                        <h5><i class="fa-solid fa-shower"></i> Bathrooms</h5>
+                                        <ul class="service-card__specs">
+                                            <li><i class="fa-solid fa-check"></i> Clean and disinfect toilet</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean sink and faucets</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean shower or bathtub (basic)</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean mirrors</li>
+                                            <li><i class="fa-solid fa-check"></i> Empty trash</li>
+                                            <li><i class="fa-solid fa-check"></i> Mop and disinfect floors</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="service-specs-category">
+                                        <h5><i class="fa-solid fa-utensils"></i> Kitchen (Basic)</h5>
+                                        <ul class="service-card__specs">
+                                            <li><i class="fa-solid fa-check"></i> Clean surfaces and countertops</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean stovetop exterior</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean microwave exterior</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean appliance exteriors</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean dishwasher exterior</li>
+                                            <li><i class="fa-solid fa-check"></i> Empty trash</li>
+                                            <li class="service-specs-note"><i class="fa-solid fa-triangle-exclamation"></i> Does not include deep cleaning of oven or refrigerator interior</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="service-specs-category">
+                                        <h5><i class="fa-solid fa-border-all"></i> Glass & Basic Details</h5>
+                                        <ul class="service-card__specs">
+                                            <li><i class="fa-solid fa-check"></i> Clean mirrors</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean accessible interior glass</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean door handles and light switches</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="service-specs-category">
+                                        <h5><i class="fa-solid fa-house"></i> General Throughout the House</h5>
+                                        <ul class="service-card__specs">
+                                            <li><i class="fa-solid fa-check"></i> Remove visible cobwebs</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean visible baseboards</li>
+                                            <li><i class="fa-solid fa-check"></i> Air freshening (if client allows)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <a href="#contact" class="btn btn--primary btn--sm">Get Quote</a>
+                                </div>
+                                
+                                <!-- Deep Cleaning Panel -->
+                                <div class="service-suboptions__panel" data-panel="deep">
+                                    <h4><i class="fa-solid fa-sparkles"></i> Deep Cleaning</h4>
+                                    <p class="service-suboptions__desc">Thorough cleaning that reaches every corner of your home.</p>
+                                    
+                                    <div class="service-specs-category">
+                                        <h5><i class="fa-solid fa-couch"></i> Living Room & Common Areas</h5>
+                                        <ul class="service-card__specs">
+                                            <li><i class="fa-solid fa-check"></i> Dust high and low (shelves, frames, baseboards)</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean furniture inside and out (if empty)</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean behind and under movable furniture</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean doors, frames, and handles</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean light switches and outlets</li>
+                                            <li><i class="fa-solid fa-check"></i> Remove cobwebs</li>
+                                            <li><i class="fa-solid fa-check"></i> Wash or vacuum sofas (depending on material)</li>
+                                            <li><i class="fa-solid fa-check"></i> Deep floor cleaning (sweep, mop, stain removal)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="service-specs-category">
+                                        <h5><i class="fa-solid fa-bed"></i> Bedrooms</h5>
+                                        <ul class="service-card__specs">
+                                            <li><i class="fa-solid fa-check"></i> Clean closets inside and out (if empty)</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean beds, headboards, and furniture</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean interior windows</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean baseboards and corners</li>
+                                            <li><i class="fa-solid fa-check"></i> Dust high areas</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean under beds</li>
+                                            <li><i class="fa-solid fa-check"></i> Deep vacuum or mop floors</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="service-specs-category">
+                                        <h5><i class="fa-solid fa-shower"></i> Bathrooms (Deep)</h5>
+                                        <ul class="service-card__specs">
+                                            <li><i class="fa-solid fa-check"></i> Fully disinfect toilet</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean sink, faucets, and drains</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean and disinfect shower or bathtub</li>
+                                            <li><i class="fa-solid fa-check"></i> Remove limescale, mold, and stains</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean tiles and walls</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean mirrors and accessories</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean cabinets inside and out</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean floors and baseboards</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="service-specs-category">
+                                        <h5><i class="fa-solid fa-utensils"></i> Kitchen (Deep)</h5>
+                                        <ul class="service-card__specs">
+                                            <li><i class="fa-solid fa-check"></i> Clean cabinets inside and out</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean refrigerator inside and out</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean oven inside and out</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean microwave inside and out</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean stovetop and range hood</li>
+                                            <li><i class="fa-solid fa-check"></i> Wash and disinfect dishwasher</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean tiles and nearby walls</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean baseboards and corners</li>
+                                            <li><i class="fa-solid fa-check"></i> Empty trash and disinfect area</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="service-specs-category">
+                                        <h5><i class="fa-solid fa-border-all"></i> Glass & Windows</h5>
+                                        <ul class="service-card__specs">
+                                            <li><i class="fa-solid fa-check"></i> Clean windows from inside</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean window tracks and frames</li>
+                                            <li><i class="fa-solid fa-check"></i> Clean glass doors</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="service-specs-category">
+                                        <h5><i class="fa-solid fa-broom"></i> Floors (Deep)</h5>
+                                        <ul class="service-card__specs">
+                                            <li><i class="fa-solid fa-check"></i> Deep vacuuming</li>
+                                            <li><i class="fa-solid fa-check"></i> Stain removal</li>
+                                            <li><i class="fa-solid fa-check"></i> Grout cleaning</li>
+                                            <li><i class="fa-solid fa-check"></i> Carpets (if included)</li>
+                                            <li><i class="fa-solid fa-check"></i> Special floors (hardwood, tile, vinyl)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <a href="#contact" class="btn btn--primary btn--sm">Get Quote</a>
+                                </div>
+                            </div>
                         </div>
                     </article>
                     
@@ -167,52 +330,93 @@
                         </div>
                         <div class="service-card__details">
                             <h4>What's Included:</h4>
-                            <ul class="service-card__specs">
-                                <li><i class="fa-solid fa-check"></i> Office desk and workstation cleaning</li>
-                                <li><i class="fa-solid fa-check"></i> Common area maintenance</li>
-                                <li><i class="fa-solid fa-check"></i> Restroom deep cleaning and sanitization</li>
-                                <li><i class="fa-solid fa-check"></i> Break room and kitchen cleaning</li>
-                                <li><i class="fa-solid fa-check"></i> Floor care (vacuum, mop, polish)</li>
-                                <li><i class="fa-solid fa-check"></i> Window and glass cleaning</li>
-                                <li><i class="fa-solid fa-check"></i> Trash and recycling removal</li>
-                                <li><i class="fa-solid fa-check"></i> Flexible scheduling (after hours available)</li>
-                            </ul>
-                            <a href="#contact" class="btn btn--primary btn--sm">Get Quote</a>
-                        </div>
-                    </article>
-                    
-                    <!-- Service 3: Deep Cleaning -->
-                    <article class="service-card service-card--expandable" data-service="deep">
-                        <div class="service-card__header">
-                            <div class="service-card__icon">
-                                <i class="fa-solid fa-broom"></i>
+                            
+                            <div class="service-specs-category">
+                                <h5><i class="fa-solid fa-chair"></i> Work Areas (Offices & Desks)</h5>
+                                <ul class="service-card__specs">
+                                    <li><i class="fa-solid fa-check"></i> Dust desks, tables, and chairs</li>
+                                    <li><i class="fa-solid fa-check"></i> Clean phones, keyboards, and mouse (dry cleaning)</li>
+                                    <li><i class="fa-solid fa-check"></i> Empty trash cans and replace bags</li>
+                                    <li><i class="fa-solid fa-check"></i> Organize visible areas (without moving personal documents)</li>
+                                </ul>
                             </div>
-                            <h3 class="service-card__title">Deep Cleaning</h3>
-                            <p class="service-card__description">
-                                Thorough cleaning that reaches every corner.
-                            </p>
-                            <button class="service-card__toggle" aria-expanded="false">
-                                <span>View Details</span>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </button>
-                        </div>
-                        <div class="service-card__details">
-                            <h4>What's Included:</h4>
-                            <ul class="service-card__specs">
-                                <li><i class="fa-solid fa-check"></i> All regular cleaning services PLUS:</li>
-                                <li><i class="fa-solid fa-check"></i> Inside oven and refrigerator cleaning</li>
-                                <li><i class="fa-solid fa-check"></i> Inside cabinets and drawers</li>
-                                <li><i class="fa-solid fa-check"></i> Baseboards and door frames</li>
-                                <li><i class="fa-solid fa-check"></i> Light fixtures and ceiling fans</li>
-                                <li><i class="fa-solid fa-check"></i> Window sills and tracks</li>
-                                <li><i class="fa-solid fa-check"></i> Behind and under furniture</li>
-                                <li><i class="fa-solid fa-check"></i> Detailed grout and tile cleaning</li>
-                            </ul>
+                            
+                            <div class="service-specs-category">
+                                <h5><i class="fa-solid fa-utensils"></i> Kitchen or Break Room</h5>
+                                <ul class="service-card__specs">
+                                    <li><i class="fa-solid fa-check"></i> Clean tables and surfaces</li>
+                                    <li><i class="fa-solid fa-check"></i> Clean microwave exterior</li>
+                                    <li><i class="fa-solid fa-check"></i> Clean refrigerator exterior</li>
+                                    <li><i class="fa-solid fa-check"></i> Wash or disinfect dishwasher</li>
+                                    <li><i class="fa-solid fa-check"></i> Empty trash</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-specs-category">
+                                <h5><i class="fa-solid fa-people-group"></i> Common Areas</h5>
+                                <ul class="service-card__specs">
+                                    <li><i class="fa-solid fa-check"></i> Clean conference tables</li>
+                                    <li><i class="fa-solid fa-check"></i> Clean light switches and door handles</li>
+                                    <li><i class="fa-solid fa-check"></i> Dust shelves</li>
+                                    <li><i class="fa-solid fa-check"></i> Clean doors and frames</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-specs-category">
+                                <h5><i class="fa-solid fa-broom"></i> Floors</h5>
+                                <ul class="service-card__specs">
+                                    <li><i class="fa-solid fa-check"></i> Sweep or vacuum</li>
+                                    <li><i class="fa-solid fa-check"></i> Mop according to floor type</li>
+                                    <li><i class="fa-solid fa-check"></i> Remove visible stains</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-specs-category">
+                                <h5><i class="fa-solid fa-restroom"></i> Bathrooms</h5>
+                                <ul class="service-card__specs">
+                                    <li><i class="fa-solid fa-check"></i> Clean and disinfect toilets</li>
+                                    <li><i class="fa-solid fa-check"></i> Wash sinks and faucets</li>
+                                    <li><i class="fa-solid fa-check"></i> Clean mirrors</li>
+                                    <li><i class="fa-solid fa-check"></i> Restock toilet paper, soap, and towels</li>
+                                    <li><i class="fa-solid fa-check"></i> Empty trash</li>
+                                    <li><i class="fa-solid fa-check"></i> Mop and disinfect floors</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-specs-category">
+                                <h5><i class="fa-solid fa-border-all"></i> Glass (Basic)</h5>
+                                <ul class="service-card__specs">
+                                    <li><i class="fa-solid fa-check"></i> Clean accessible interior glass</li>
+                                    <li><i class="fa-solid fa-check"></i> Remove fingerprints from glass doors</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-specs-category">
+                                <h5><i class="fa-solid fa-spray-can-sparkles"></i> Basic Disinfection</h5>
+                                <ul class="service-card__specs">
+                                    <li><i class="fa-solid fa-check"></i> Door handles</li>
+                                    <li><i class="fa-solid fa-check"></i> Light switches</li>
+                                    <li><i class="fa-solid fa-check"></i> Common phones</li>
+                                    <li><i class="fa-solid fa-check"></i> Handrails</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-specs-category">
+                                <h5><i class="fa-solid fa-wand-magic-sparkles"></i> Extra Details (Per Service)</h5>
+                                <ul class="service-card__specs">
+                                    <li><i class="fa-solid fa-check"></i> Clean ventilation grilles</li>
+                                    <li><i class="fa-solid fa-check"></i> Clean ceiling fans</li>
+                                    <li><i class="fa-solid fa-check"></i> Clean light fixtures</li>
+                                    <li><i class="fa-solid fa-check"></i> Post-move cleaning</li>
+                                    <li><i class="fa-solid fa-check"></i> Post-construction cleaning</li>
+                                </ul>
+                            </div>
+                            
                             <a href="#contact" class="btn btn--primary btn--sm">Get Quote</a>
                         </div>
                     </article>
                     
-                    <!-- Service 4: Move In/Out Cleaning -->
+                    <!-- Service 3: Move In/Out Cleaning -->
                     <article class="service-card service-card--expandable" data-service="moveinout">
                         <div class="service-card__header">
                             <div class="service-card__icon">
@@ -426,7 +630,6 @@
                             <div class="testimonial-card__avatar">SJ</div>
                             <div class="testimonial-card__info">
                                 <span class="testimonial-card__name">Sarah Johnson</span>
-                                <span class="testimonial-card__role">Residential Client</span>
                             </div>
                         </div>
                     </article>
@@ -447,7 +650,6 @@
                             <div class="testimonial-card__avatar">MW</div>
                             <div class="testimonial-card__info">
                                 <span class="testimonial-card__name">Michael Williams</span>
-                                <span class="testimonial-card__role">Office Manager</span>
                             </div>
                         </div>
                     </article>
@@ -468,10 +670,27 @@
                             <div class="testimonial-card__avatar">EB</div>
                             <div class="testimonial-card__info">
                                 <span class="testimonial-card__name">Emily Brown</span>
-                                <span class="testimonial-card__role">Recurring Client</span>
                             </div>
                         </div>
                     </article>
+                </div>
+                
+                <!-- Google Review CTA -->
+                <div class="review-cta">
+                    <div class="review-cta__content">
+                        <div class="review-cta__icon">
+                            <i class="fa-brands fa-google"></i>
+                        </div>
+                        <div class="review-cta__text">
+                            <h3>Love Our Service?</h3>
+                            <p>Share your experience and help others discover A&A SERVIGROUP LLC</p>
+                        </div>
+                        <a href="#" class="review-cta__btn" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-star"></i>
+                            <span>Leave a Review</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -485,7 +704,7 @@
                         <h2 class="section__title">Ready for a Spotless Space?</h2>
                         <p class="contact__description">
                             Get your free quote today. Fill out the form or 
-                            contact us directly. We respond within 24 hours.
+                            contact us directly. We respond as soon as possible.
                         </p>
                         
                         <div class="contact__methods">
@@ -519,7 +738,7 @@
                                 </div>
                                 <div class="contact__method-info">
                                     <span class="contact__method-label">Location</span>
-                                    <span class="contact__method-value">5050 Quorum Drive, Dallas, TX 75254 Suite 700</span>
+                                    <span class="contact__method-value">5050 Quorum Drive Suite 700, Dallas, TX 75254</span>
                                 </div>
                             </a>
                             
@@ -574,9 +793,9 @@
                                 <label for="service" class="form__label">Service of Interest</label>
                                 <select id="service" name="service" class="form__select">
                                     <option value="">Select a service</option>
-                                    <option value="residential">Residential Cleaning</option>
+                                    <option value="residential-basic">Residential - Basic Cleaning</option>
+                                    <option value="residential-deep">Residential - Deep Cleaning</option>
                                     <option value="commercial">Commercial Cleaning</option>
-                                    <option value="deep">Deep Cleaning</option>
                                     <option value="moveinout">Move In/Out</option>
                                     <option value="recurring">Recurring Service</option>
                                     <option value="other">Other</option>
@@ -676,6 +895,9 @@
                         <a href="#" class="footer__social-link" aria-label="WhatsApp">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
+                        <a href="#" class="footer__social-link footer__social-link--google" aria-label="Google Reviews" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-google"></i>
+                        </a>
                     </div>
                 </div>
                 
@@ -714,7 +936,7 @@
                         </li>
                         <li>
                             <i class="fa-solid fa-location-dot"></i>
-                            <a href="https://www.google.com/maps/search/?api=1&query=5050+Quorum+Drive+Dallas+TX+75254+Suite+700" target="_blank" rel="noopener noreferrer">5050 Quorum Drive, Dallas, TX 75254</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=5050+Quorum+Drive+Suite+700+Dallas+TX+75254" target="_blank" rel="noopener noreferrer">5050 Quorum Drive Suite 700, Dallas, TX 75254</a>
                         </li>
                         <li>
                             <i class="fa-solid fa-clock"></i>
