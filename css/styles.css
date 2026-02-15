@@ -606,7 +606,7 @@ select {
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-base);
     border: 1px solid var(--color-gray-100);
-    height: 350px; /* reduced height */
+    height: 250px; /* reduced height */
     overflow-y: auto; /* Scroll if content exceeds height */
     display: flex;
     flex-direction: column;
@@ -2329,4 +2329,32 @@ select {
 
 
 
+
+
+/* ===== MOBILE LANDSCAPE OPTIMIZATION ===== */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    /* Lightbox: Ensure image fits vertically */
+    #lightbox img {
+        max-height: 90vh;
+        max-width: 80vw;
+    }
+    
+    /* Navigation: Adjust for short height if needed */
+    .nav__menu {
+        padding-top: 60px !important;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+    /* Grid: Use 2 columns instead of 1 for better use of width */
+    .services__grid,
+    .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero__content {
+        padding-top: 80px; /* Avoid header overlap */
+    }
+}
 
