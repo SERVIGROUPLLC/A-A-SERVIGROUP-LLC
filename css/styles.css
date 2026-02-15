@@ -2328,12 +2328,5 @@ select {
 }
 
 
-/* Make Painting Service card square */
-.service-card[data-service='painting'] {
-    height: auto !important; /* Override the 100% height */
-    aspect-ratio: 1 / 1;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-}
+
 
