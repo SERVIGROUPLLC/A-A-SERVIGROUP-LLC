@@ -2382,3 +2382,39 @@ select {
     }
 }
 
+
+/* ===== WHATSAPP BUTTON ===== */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    background-color: #20b858;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-btn {
+        bottom: 80px; /* Avoid covering bottom nav/footer content on mobile */
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+    }
+}
+
