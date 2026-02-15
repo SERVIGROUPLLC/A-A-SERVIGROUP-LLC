@@ -1368,15 +1368,14 @@ select {
   position: relative;
 }
 
-/* Add dividers between items */
+/* Removing dividers as requested */
 .promotion-card:not(:last-child) {
-    border-right: 1px solid var(--color-gray-100);
+    border: none;
 }
 
 @media (max-width: 900px) {
     .promotion-card:not(:last-child) {
-        border-right: none;
-        border-bottom: 1px solid var(--color-gray-100);
+        border: none;
     }
 }
 
