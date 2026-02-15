@@ -993,14 +993,15 @@ select {
 }
 
 .gallery__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: var(--spacing-xl);
-    align-items: start;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: var(--spacing-xl);
 }
 
 .gallery__item {
+    flex: 1 1 350px;
+    max-width: 450px;
     position: relative;
     border-radius: var(--radius-xl);
     overflow: hidden;
