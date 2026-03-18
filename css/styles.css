@@ -1594,7 +1594,29 @@ select {
     color: var(--color-gray-500);
 }
 
+.testimonials__action {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-3xl);
+}
 
+.btn--google-review {
+    background-color: var(--color-white);
+    color: var(--color-gray-800);
+    border: 1px solid var(--color-gray-200);
+    box-shadow: var(--shadow-md);
+}
+
+.btn--google-review:hover {
+    background-color: var(--color-gray-50);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn--google-review i {
+    color: #4285F4; /* Google Blue */
+    font-size: 1.2rem;
+}
 
 /* ===== CONTACT ===== */
 .contact {
